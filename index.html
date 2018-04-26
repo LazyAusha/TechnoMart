@@ -78,16 +78,16 @@
 						<p>Соседям на радость</p>
 						<img src="img/bosch-slider-2-min.jpg" width="620" height="266" alt="Первый слайд">
 						<a class="btn" href="#">Открыть каталог</a>
-						<a class="btn-left" href="#">Влево</a>
-						<a class="btn-right" href="#">Вправо</a>
+						<button class="btn-left" type="button">Влево</button>
+						<button class="btn-right" type="button">Вправо</button>
 					</li>
 					<li class="slide">
 						<h3>Перфораторы</h3>
 						<p>Настоящие мужские игрушки</p>
 						<img src="img/bosch-slider-1-min.jpg" width="620" height="266" alt="Второй слайд">
 						<a class="btn" href="#">Открыть каталог</a>
-						<a class="btn-left" href="#">Влево</a>
-						<a class="btn-right" href="#">Вправо</a>
+						<button class="btn-left" type="button">Влево</button>
+						<button class="btn-right" type="button" >Вправо</button>
 					</li>
 				</ul>
 			</section>
@@ -123,6 +123,7 @@
 			</section>
 
 			<section class="popular-brands">
+				<h2 class="visually-hidden">Популярные производители</h2>
 				<a class="btn" href="#">Все производители</a>
 				<ul class="popular-brands-list">
 					<li>
@@ -251,13 +252,28 @@
 			</div>
 		</footer>
 
-		<section class="popup">
-			<!-- Формы -->
+		<section class="mail-popup">
+			<form action="http://echo.htmlacademy.ru" method="post">
+				<label>Ваше имя:
+					<input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+				</label>
+				<label>Ваш e-mail:
+					<input type="text" name="email" placeholder="Для отправки ответа">
+				</label>
+				<p>
+					<label>Текст письма:
+						<textarea name="letter">
+							В свободной форме
+						</textarea>
+					</label>
+				</p>
+				<button class="btn" type="submit">Отправить</button>
+			</form>
 		</section>
 
 		<section class="modal modal-map">
 			<img src="img/map-full-min.jpg" width="940" height="446" alt="Здесь будет адрес">
-			<!-- Карта -->
+			<button class="close-btn" type="button">Закрыть</button>
 		</section>
 
 	</body>
