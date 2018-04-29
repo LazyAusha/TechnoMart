@@ -3,18 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Каталог магазина «Техномарт»</title>
+		<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
+	<body class="inner-page">
 		<header class="main-header">
 			<div class="header-top">
-					<a class="main-logo" href="index.html">
-						<img src="img/logo.svg" width="100" height="100" alt="Логотип сайта «Техномарт»">
+					<a class="main-logo">
+						<span>Техномарт</span>
 					</a>
 					<ul class="buy-navigation">
 						<li class="search"><a href="#">Поиск:</a></li>
-						<li class="marks"><a href="#">Закладки:<span class="quantity"></span></a></li>
-						<li class="cart"><a href="#">Корзина:<span class="quantity"></span></a></li>
-						<li><a class="btn" href="#">Оформить заказ</a></li>
+						<li class="marks"><a href="#">Закладки: 0<span class="quantity"></span></a></li>
+						<li class="cart"><a href="#">Корзина: 10<span class="quantity"></span></a></li>
+						<li><a class="header-btn" href="#">Оформить заказ</a></li>
 					</ul>
 			</div>
 			<div class="header-middle">
@@ -24,7 +28,7 @@
 				и инструментов для ремонта
 				</p>
 				<p class="contacts">
-					<span class="contacts-phone">+7 (812) 555-05-55</span>
+					<span class="contacts-phone">+7 (812) 555-05-55</span><br>
 					<span class="contacts-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
 				</p>
 				<ul class="user-navigation">
@@ -47,6 +51,7 @@
 
 		<main class="container">
 			<section class="breadcrumbs">
+				<h2 class="visually-hidden">Меню сайта</h2>
 				<ul class="breadcrumbs-list">
 					<li><a href="index.html">Главная</a></li>
 					<li><a href="#">Каталог</a></li>
@@ -58,13 +63,13 @@
 			<h1>Перфораторы</h1>
 
 			<section class="filter">
-				<h2>Фильтр:</h2>
+				<h2 class="filter-subtitle">Фильтр:</h2>
 				<form action="http://echo.htmlacademy.ru" method="post">
 					<fieldset class="price">
 						<legend>Цена:</legend>
 						<input type="range" name="price">
-						<output>0</output>
-						<output>30000</output>
+						<input type="text" placeholder="0">
+						<input type="text" placeholder="30000">
 					</fieldset>
 					<fieldset class="brands">
 						<legend>Производители:</legend>
@@ -88,13 +93,13 @@
 			</section>
 
 			<section class="sort">
-				<h2>Сортировка:</h2>
+				<h2 class="filter-subtitle">Сортировка:</h2>
 				<ul class="sort-list">
-					<li><button class="sort-current" type="button">По цене</button></li>
-					<li><button type="button">По типу</button></li>
-					<li><button type="button">По функционалу</button></li>
-					<li><button type="button">Вверх</button></li>
-					<li><button type="button">Вниз</button></li>
+					<li><a class="sort-current" href="#">По цене</a></li>
+					<li><a href="#">По типу</a></li>
+					<li><a href="#">По функционалу</a></li>
+					<li><a href="#">Вверх</a></li>
+					<li><a href="#">Вниз</a></li>
 				</ul>
 			</section>
 
@@ -175,10 +180,9 @@
 
 		<footer class="main-footer">
 			<div class="footer-top">
-				<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 
+				<p class="footer-contacts">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> 
 				+7 (812) 555-05-55</p>
-				<a class="footer-logo" href="index.html">
-					<img src="img/footer-logo.svg" width="100" height="100" alt="Логотип">
+				<a class="footer-logo">Техномарт
 				</a>
 				<ul class="footer-site-navigation">
 					<li><a href="#">Компания</a></li>
@@ -205,11 +209,11 @@
 					<li><a href="#">Фейсбук</a></li>
 					<li><a href="#">Инстаграм</a></li>
 				</ul>
-				<p>Обратная связь:
-					<a href="mailto:mail@htmlacademy.ru">Электронная почта</a>
+				<p class="footer-copyright"><span class="cite">Обратная связь:</span>
+					<a class="copyright-link" href="mailto:mail@htmlacademy.ru">Электронная почта</a>
 				</p>
-				<p>Разработано – 
-					<a href="http://htmlacademy.ru">HTML Academy</a>
+				<p class="footer-copyright"><span class="cite">Разработано –</span> 
+					<a class="copyright-link" href="http://htmlacademy.ru">HTML Academy</a>
 				</p>
 			</div>
 		</footer>
@@ -221,7 +225,7 @@
 			<button class="close-btn" type="button">Закрыть</button>
 		</section>
 
-		<section class="poput-item">
+		<section class="popup-item">
 			<h2 class="visually-hidden">Меню товара</h2>
 			<button class="btn" type="button">Купить</button>
 			<button class="btn-marks" type="button">В закладки</button>
